@@ -16,8 +16,8 @@ def register(request):
     return render(request, 'users/register.html', {'form':form})
 
 def logoutView(request):
-    logout(request)
-    return render(request, "users/logout.html")
+    def logout(request):
+        return render(request, "users/logout.html")
 
 @login_required
 def profile(request):
